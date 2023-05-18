@@ -18,19 +18,13 @@ public class PowerUpMenu : MonoBehaviour
 
 	private void OnEnable()
 	{
-        //TimeManager.OnHourChanged += TimeCheck;
+        TimeManager.OnDayModeReached += LaunchMenu;
 	}
 
 	private void OnDisable()
 	{
-        //TimeManager.OnHourChanged -= TimeCheck;
-	}
-
-    private void TimeCheck()
-	{
-        if (TimeManager.Hour == GameVariables.dayModeHour)
-            LaunchMenu();
-	}
+        TimeManager.OnDayModeReached -= LaunchMenu;
+    }
 
     public void LaunchMenu()
 	{

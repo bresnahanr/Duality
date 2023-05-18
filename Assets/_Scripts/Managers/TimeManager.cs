@@ -8,6 +8,8 @@ public class TimeManager : MonoBehaviour
 
     public static Action OnMinuteChanged;
     public static Action OnHourChanged;
+    public static Action OnDayModeReached;
+    public static Action OnNightModeReached;
 
     public static int Minute { get; private set; }
     public static int Hour { get; private set; }
@@ -41,6 +43,12 @@ public class TimeManager : MonoBehaviour
 			{
                 Hour++;
                 Minute = 0;
+
+                if (Hour == GameVariables.dayModeHour)
+                    OnDayModeReached.Invoke();
+
+                if (Hour == GameVariables.nightModeHour)
+                    OnNightModeReached.Invoke();
 
                 if(Hour >= 24)
 				{

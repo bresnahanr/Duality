@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
 
 	public enum GameState
 	{
-		StartMenu,
+		// StartMenu,
 		DayMode,
 		NightMode,
 		EndScreen
@@ -27,9 +27,9 @@ public class GameManager : MonoBehaviour
 
 		switch(newState)
 		{
-			case GameState.StartMenu:
+			//case GameState.StartMenu:
 				//do something
-				break;
+				//break;
 			case GameState.DayMode:
 				//add another townsfolk or two
 				//power up menu 
@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
-		PowerUpMenu = GetComponent<PowerUpMenu>();
+
     }
 
     // Update is called once per frame
@@ -60,20 +60,4 @@ public class GameManager : MonoBehaviour
     {
         
     }
-
-	private void OnEnable()
-	{
-		TimeManager.OnHourChanged += TimeCheck;
-	}
-
-	private void OnDisable()
-	{
-		TimeManager.OnHourChanged -= TimeCheck;
-	}
-
-	private void TimeCheck()
-	{
-		if (TimeManager.Hour == GameVariables.dayModeHour)
-			PowerUpMenu.LaunchMenu();
-	}
 }
