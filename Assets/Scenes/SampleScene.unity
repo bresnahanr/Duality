@@ -607,7 +607,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.016666668
+  m_VoxelSize: 0.33333334
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: f14a6fb7fe5db7c4297c5611243c92ef, type: 2}
 --- !u!1 &318584327
@@ -1040,7 +1040,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &410654819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2262,7 +2262,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &668191433
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4518,7 +4518,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1095149167}
-  m_LocalRotation: {x: 0.07171551, y: 0.83961254, z: -0.11444618, w: 0.5261271}
+  m_LocalRotation: {x: 0.071715504, y: 0.83961254, z: -0.11444616, w: 0.52612716}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6083,6 +6083,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 923426992}
     m_Modifications:
+    - target: {fileID: 1510624066, guid: 70cdf0ec272eee14da54413459e8e76d, type: 3}
+      propertyPath: m_Radius
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510624066, guid: 70cdf0ec272eee14da54413459e8e76d, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4539827301978768771, guid: 70cdf0ec272eee14da54413459e8e76d, type: 3}
+      propertyPath: m_Radius
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4539827301978768774, guid: 70cdf0ec272eee14da54413459e8e76d, type: 3}
       propertyPath: m_Name
       value: Townsfolk (1)
@@ -7140,12 +7152,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 923426992}
     m_Modifications:
     - target: {fileID: 7495662568917484545, guid: 07f8d13af33241d4da6658611d425f47, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7495662568917484545, guid: 07f8d13af33241d4da6658611d425f47, type: 3}
       propertyPath: m_AngularSpeed
       value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 7495662568917484545, guid: 07f8d13af33241d4da6658611d425f47, type: 3}
       propertyPath: m_StoppingDistance
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7495662568917484546, guid: 07f8d13af33241d4da6658611d425f47, type: 3}
       propertyPath: cam
